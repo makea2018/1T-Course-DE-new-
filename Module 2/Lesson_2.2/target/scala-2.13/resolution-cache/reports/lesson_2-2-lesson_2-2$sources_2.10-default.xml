@@ -7,7 +7,7 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="default"
 		confs="default"
-		date="20221101115340"/>
+		date="20221101143852"/>
 	<dependencies>
 		<module organisation="org.jetbrains.scala" name="sbt-structure-extractor">
 			<revision name="2021.3.0" status="release" pubdate="20211015151505" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/JetBrains/sbt-structure" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="46">

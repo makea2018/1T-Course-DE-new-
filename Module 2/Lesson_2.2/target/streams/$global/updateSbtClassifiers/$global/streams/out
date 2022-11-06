@@ -7,6 +7,7 @@
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'default'
 [debug] == resolving dependencies for lesson_2-2#lesson_2-2$sbt_2.10;0.1.0-SNAPSHOT [default]
+[debug] no default cache defined: set to C:\Users\User\.ivy2\cache
 [debug] == resolving dependencies lesson_2-2#lesson_2-2$sbt_2.10;0.1.0-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [default->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {default=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]}
@@ -20,7 +21,6 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {default=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]}
-[debug] no default cache defined: set to C:\Users\User\.ivy2\cache
 [info] Resolving org.scala-lang#scala-library;2.10.7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.7
@@ -2854,9 +2854,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.18!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar
-[debug] :: resolution report :: resolve 721ms :: artifacts dl 17ms
+[debug] :: resolution report :: resolve 1203ms :: artifacts dl 31ms
 [debug] 	report for lesson_2-2#lesson_2-2$sbt_2.10;0.1.0-SNAPSHOT default produced in D:\Coursers of programming 2022\Software Engineer 2022\1T-Course-DE-new-\Module 2\Lesson_2.2\target\scala-2.13\resolution-cache\reports\lesson_2-2-lesson_2-2$sbt_2.10-default.xml
-[debug] 	resolve done (721ms resolve - 17ms download)
+[debug] 	resolve done (1203ms resolve - 31ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: lesson_2-2#lesson_2-2$sources_2.10;0.1.0-SNAPSHOT
 [debug] 	confs: [default]
@@ -4170,6 +4170,6 @@
 [debug] 	[NOT REQUIRED] org.apache.ant#ant;1.9.9!ant.jar(src)
 [debug] 	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.18!apply-macro.jar(src)
-[debug] :: resolution report :: resolve 429ms :: artifacts dl 16ms
+[debug] :: resolution report :: resolve 436ms :: artifacts dl 20ms
 [debug] 	report for lesson_2-2#lesson_2-2$sources_2.10;0.1.0-SNAPSHOT default produced in D:\Coursers of programming 2022\Software Engineer 2022\1T-Course-DE-new-\Module 2\Lesson_2.2\target\scala-2.13\resolution-cache\reports\lesson_2-2-lesson_2-2$sources_2.10-default.xml
-[debug] 	resolve done (429ms resolve - 16ms download)
+[debug] 	resolve done (436ms resolve - 20ms download)

@@ -4,7 +4,7 @@
 		module="lesson_2-2_2.13"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20221101115340"
+		publication="20221101143851"
 	>
 		<description>
 		Lesson_2.2
@@ -34,5 +34,6 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.13.10" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.13.10" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="net.ruippeixotog" name="scala-scraper_2.13" rev="3.0.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
