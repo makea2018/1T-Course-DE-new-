@@ -1,16 +1,16 @@
-CREATE TABLE "Оценки по кварталам"
+CREATE TABLE Кварталы
 (
 	Id SERIAL,
 	ФИО CHARACTER VARYING,
-	"1-й квартал" CHARACTER VARYING (1),
-	"2-й квартал" CHARACTER VARYING (1),
-	"3-й квартал" CHARACTER VARYING (1),
-	"4-й квартал" CHARACTER VARYING (1),
+	"квартал1" CHARACTER VARYING (1),
+	"квартал2" CHARACTER VARYING (1),
+	"квартал3" CHARACTER VARYING (1),
+	"квартал4" CHARACTER VARYING (1),
 	FOREIGN KEY (Id) REFERENCES Сотрудники (Id)
 );
 
-INSERT INTO "Оценки по кварталам"
-	("1-й квартал", "2-й квартал", "3-й квартал", "4-й квартал")
+INSERT INTO Кварталы
+	("квартал1", "квартал2", "квартал3", "квартал4")
 VALUES
 	('A', 'C', 'B', 'D'),
 	('A', 'B', 'D', 'C'),
@@ -28,5 +28,5 @@ VALUES
 	('B', 'B', 'B', 'B')
 ;
 
-UPDATE "Оценки по кварталам"
-SET ФИО = (SELECT ФИО FROM Сотрудники WHERE Сотрудники.Id = "Оценки по кварталам".Id)
+UPDATE Кварталы
+SET ФИО = (SELECT ФИО FROM Сотрудники WHERE Сотрудники.Id = Кварталы.Id)
