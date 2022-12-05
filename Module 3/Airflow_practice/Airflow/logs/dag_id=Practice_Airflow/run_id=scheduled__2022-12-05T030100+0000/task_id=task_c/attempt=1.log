@@ -1,0 +1,26 @@
+[2022-12-05T11:03:09.652+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Practice_Airflow.task_c scheduled__2022-12-05T03:01:00+00:00 [queued]>
+[2022-12-05T11:03:09.662+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Practice_Airflow.task_c scheduled__2022-12-05T03:01:00+00:00 [queued]>
+[2022-12-05T11:03:09.662+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-05T11:03:09.662+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-05T11:03:09.663+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-05T11:03:09.727+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): task_c> on 2022-12-05 03:01:00+00:00
+[2022-12-05T11:03:09.733+0000] {standard_task_runner.py:55} INFO - Started process 414 to run task
+[2022-12-05T11:03:09.736+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Practice_Airflow', 'task_c', 'scheduled__2022-12-05T03:01:00+00:00', '--job-id', '204', '--raw', '--subdir', 'DAGS_FOLDER/Airflow_pr.py', '--cfg-path', '/tmp/tmpusjkjo08']
+[2022-12-05T11:03:09.739+0000] {standard_task_runner.py:83} INFO - Job 204: Subtask task_c
+[2022-12-05T11:03:09.843+0000] {task_command.py:376} INFO - Running <TaskInstance: Practice_Airflow.task_c scheduled__2022-12-05T03:01:00+00:00 [running]> on host a5be4f489b88
+[2022-12-05T11:03:10.009+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Practice_Airflow
+AIRFLOW_CTX_TASK_ID=task_c
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-05T03:01:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-05T03:01:00+00:00
+[2022-12-05T11:03:10.016+0000] {crypto.py:84} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-12-05T11:03:10.064+0000] {logging_mixin.py:137} INFO - Число 1:  85
+[2022-12-05T11:03:10.064+0000] {logging_mixin.py:137} INFO - Число 2:  17
+[2022-12-05T11:03:10.071+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-05T11:03:10.081+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=Practice_Airflow, task_id=task_c, execution_date=20221205T030100, start_date=20221205T110309, end_date=20221205T110310
+[2022-12-05T11:03:10.189+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-05T11:03:10.218+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

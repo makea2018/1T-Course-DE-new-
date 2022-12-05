@@ -1,0 +1,39 @@
+[2022-12-05T11:32:19.461+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Practice_Airflow.old_a scheduled__2022-12-05T11:28:00+00:00 [queued]>
+[2022-12-05T11:32:19.474+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Practice_Airflow.old_a scheduled__2022-12-05T11:28:00+00:00 [queued]>
+[2022-12-05T11:32:19.474+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-05T11:32:19.475+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-05T11:32:19.475+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-05T11:32:19.554+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): old_a> on 2022-12-05 11:28:00+00:00
+[2022-12-05T11:32:19.561+0000] {standard_task_runner.py:55} INFO - Started process 2957 to run task
+[2022-12-05T11:32:19.564+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Practice_Airflow', 'old_a', 'scheduled__2022-12-05T11:28:00+00:00', '--job-id', '568', '--raw', '--subdir', 'DAGS_FOLDER/Airflow_pr.py', '--cfg-path', '/tmp/tmpb3p7pzk_']
+[2022-12-05T11:32:19.568+0000] {standard_task_runner.py:83} INFO - Job 568: Subtask old_a
+[2022-12-05T11:32:19.645+0000] {task_command.py:376} INFO - Running <TaskInstance: Practice_Airflow.old_a scheduled__2022-12-05T11:28:00+00:00 [running]> on host a5be4f489b88
+[2022-12-05T11:32:19.926+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Practice_Airflow
+AIRFLOW_CTX_TASK_ID=old_a
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-05T11:28:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-05T11:28:00+00:00
+[2022-12-05T11:32:19.943+0000] {logging_mixin.py:137} INFO - Data from hw_200.csv file:
+     Index   Height(Inches)"   "Weight(Pounds)"
+0        1             65.78             112.99
+1        2             71.52             136.49
+2        3             69.40             153.03
+3        4             68.22             142.34
+4        5             67.79             144.30
+..     ...               ...                ...
+195    196             65.80             120.84
+196    197             66.11             115.78
+197    198             68.24             128.30
+198    199             68.02             127.47
+199    200             71.39             127.88
+
+[200 rows x 3 columns]
+[2022-12-05T11:32:19.943+0000] {logging_mixin.py:137} INFO - Кол-во строк в df: 200
+[2022-12-05T11:32:20.055+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-05T11:32:20.067+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=Practice_Airflow, task_id=old_a, execution_date=20221205T112800, start_date=20221205T113219, end_date=20221205T113220
+[2022-12-05T11:32:20.137+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-05T11:32:20.274+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

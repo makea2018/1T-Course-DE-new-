@@ -1,0 +1,92 @@
+[2022-12-05T11:03:19.107+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Practice_Airflow.task_c scheduled__2022-12-05T04:02:00+00:00 [queued]>
+[2022-12-05T11:03:19.119+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Practice_Airflow.task_c scheduled__2022-12-05T04:02:00+00:00 [queued]>
+[2022-12-05T11:03:19.120+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-05T11:03:19.120+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-05T11:03:19.120+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-05T11:03:19.230+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): task_c> on 2022-12-05 04:02:00+00:00
+[2022-12-05T11:03:19.236+0000] {standard_task_runner.py:55} INFO - Started process 576 to run task
+[2022-12-05T11:03:19.241+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Practice_Airflow', 'task_c', 'scheduled__2022-12-05T04:02:00+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/Airflow_pr.py', '--cfg-path', '/tmp/tmpkkn_x8yv']
+[2022-12-05T11:03:19.245+0000] {standard_task_runner.py:83} INFO - Job 250: Subtask task_c
+[2022-12-05T11:03:19.371+0000] {task_command.py:376} INFO - Running <TaskInstance: Practice_Airflow.task_c scheduled__2022-12-05T04:02:00+00:00 [running]> on host a5be4f489b88
+[2022-12-05T11:03:19.528+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Practice_Airflow
+AIRFLOW_CTX_TASK_ID=task_c
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-05T04:02:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-05T04:02:00+00:00
+[2022-12-05T11:03:19.639+0000] {crypto.py:84} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-12-05T11:03:19.643+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1803, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 719, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "variable_key_uq"
+DETAIL:  Key (key)=(txt_path) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Airflow_pr.py", line 51, in task_c
+    Variable.set(key = "txt_path", value = "/opt/airflow/dags/practice.txt")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 180, in set
+    session.flush()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3345, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3485, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3445, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 633, in execute
+    uow,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 249, in save_obj
+    insert,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1224, in _emit_insert_statements
+    execution_options=execution_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 326, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1491, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2027, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1803, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 719, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "variable_key_uq"
+DETAIL:  Key (key)=(txt_path) already exists.
+
+[SQL: INSERT INTO variable (key, val, description, is_encrypted) VALUES (%(key)s, %(val)s, %(description)s, %(is_encrypted)s) RETURNING variable.id]
+[parameters: {'key': 'txt_path', 'val': '/opt/airflow/dags/practice.txt', 'description': None, 'is_encrypted': False}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-12-05T11:03:19.661+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=Practice_Airflow, task_id=task_c, execution_date=20221205T040200, start_date=20221205T110319, end_date=20221205T110319
+[2022-12-05T11:03:19.805+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 250 for task task_c ((psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "variable_key_uq"
+DETAIL:  Key (key)=(txt_path) already exists.
+
+[SQL: INSERT INTO variable (key, val, description, is_encrypted) VALUES (%(key)s, %(val)s, %(description)s, %(is_encrypted)s) RETURNING variable.id]
+[parameters: {'key': 'txt_path', 'val': '/opt/airflow/dags/practice.txt', 'description': None, 'is_encrypted': False}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 576)
+[2022-12-05T11:03:19.814+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-05T11:03:19.838+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
